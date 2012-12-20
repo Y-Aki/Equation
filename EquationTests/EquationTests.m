@@ -157,7 +157,7 @@ Equation* e;
 
 //解は、x=2
 
-// x^2 + 3x + 7 = 0 をテスト
+// x^2 + 4x + 5 = 0 をテスト
 // 虚数解 2つの場合。
 - (void)test7
 {
@@ -165,10 +165,12 @@ Equation* e;
     
     STAssertEqualsWithAccuracy(-1.5, [e real1], 0.00001, @"real1 error");
     STAssertEqualsWithAccuracy(-1.5, [e real2], 0.00001, @"real2 error");
-    STAssertEqualsWithAccuracy(9.5, [e imaginary1], 0.00001, @"imaginary1 error");
-    STAssertEqualsWithAccuracy(-9.5, [e imaginary2], 0.00001, @"imaginary2 error");
+    STAssertEqualsWithAccuracy(2.0, [e imaginary1], 0.00001, @"imaginary1 error");
+    STAssertEqualsWithAccuracy(2.0, [e imaginary2], 0.00001, @"imaginary2 error");
 }
-//解は、x＝-1.5+9.5i、-1.5-9.5i
+//解は、x＝-1.5+2.0i、-1.5-2.0i
+
+
 
 
 
