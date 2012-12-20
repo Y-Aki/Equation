@@ -170,6 +170,15 @@ Equation* e;
 }
 //解は、x＝-2.0+2.0i、-2.0-2.0i
 
+- (void)test8  //解と係数の関係
+//2x^2+4x+6=0  解）x=-2,3
+{
+    e = [[Equation alloc] initWithA:2 b:4 c:6];
+    
+    STAssertEqualsWithAccuracy(-2.0, ([e real1]+sqrt([e imaginary1])) + ([e real2]+sqrt([e imaginary2])), 0.00001, @"real1 error");//α＋β＝-b/a
+    STAssertEqualsWithAccuracy(3.0, ([e real1]+sqrt([e imaginary1])) * ([e real2]+sqrt([e imaginary2])), 0.00001, @"real1 error");//αβ＝c/a
+    
+}
 
 
 
